@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Six+Caps&display=swap');
+
+.container-principal-menu{
+    background-color: #ead03b;
+}
+
+.titulo-menu h1{
+    font-family: "Six Caps", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 6rem;
+    padding: 1.2rem 40rem 1rem;
+    color: white;
+    text-shadow: 2px 3px 5px black;
+    background-color: #b02115;
+}
+
+.descuento p{
+    text-align: center;
+    margin-top: 5rem;
+    border: 2px solid #b02115;
+    border-radius: 30px;
+    background-color: #e4878c;
+}
+
+.descuento{
+    padding-left: 36rem;
+    padding-right: 36rem;
+}
+
+.container-burger h2{
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+    padding-top: 2rem;
+    padding-left: 30rem;
+    font-size: 11rem;
+    margin-bottom: 0rem;
+}
+
+.container-burger p{
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+    padding-left: 64rem;
+    font-size: 2rem;
+}
+
+.grid{
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: 28rem 28rem 28rem;
+    grid-template-rows: 30rem 30rem 30rem;
+    padding-left: 4rem;
+}
+
+.container-img-burgas img{
+    border-radius: 3rem;
+    width: 50%;
+    height: 50%;
+    padding: 2rem;
+}
+
+
+.item-info .title{
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+}
+
+.item-info .description{
+    font-size: 15px;
+    line-height: 0.5;
+}
+
+.item-info .price{
+    font-weight: 700;
+    text-decoration-line: line-through;
+}
+
+.item-info .priceModificado{
+    margin-top: -2.7rem;
+    margin-left: 4.5rem;
+    font-weight: 700;
+}
+
+.item-info .btn-agregar button{
+    height: 40px;
+    width: 150px;
+    background-color: #b02115;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+}
+
+.item-info .btn-agregar-miss button{
+    height: 40px;
+    width: 150px;
+    background-color: #b02115;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    margin-top: 2.9rem;
+}
+
+.footer-menu{
+    padding-top: 5rem;
+}
+

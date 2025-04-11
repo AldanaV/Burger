@@ -1,0 +1,136 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.seccion{
+    background-color: #b02115;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-flow: row wrap;
+    unicode-bidi: isolate;
+    justify-content: center;
+}
+@media only screen and (max-width: 875px){
+    .seccion{
+        height: 252px;
+    }
+}
+@media only screen and (max-width: 575px){
+    .seccion{
+        height: 365px;
+    }
+}
+.cajaPrincipal{
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 100%;
+    /*height: 10rem;*/
+}
+
+.cajaSecundaria{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.itemInfo{
+    color:black;
+    line-height: 1px;
+    padding-right: 0;
+    padding-left: 0;
+    display:inline;
+    text-align: center !important;
+    align-items: center;
+    justify-content: space-between;
+    width: 18rem;
+    text-shadow:2px 1px 3px white ;
+}
+.imagenCaja{
+    padding: 1rem;
+    margin:0%;
+}
+.imagenCaja i{
+    font-size: 1.5rem;
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.tituloItem{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.tituloItem h5,.tituloItem h6{
+    line-height: 1;
+    font-weight: bolder;
+    /*padding:1rem;*/
+}
+
+
+.footer {
+    background-color: #ead03b;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    margin: 0rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 6rem;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.logo{
+    width: 25%;
+    height: 25%;
+
+}
+
+.logo img{
+    padding-bottom: 2rem;
+    margin-left: 2rem;
+}
+
+.logo2{
+    width: 22%;
+    height: 22%;
+    padding-left: 6rem;
+}
+
+.container-redes a{
+    display: inline-flex;
+    text-decoration: none;
+    color: black;
+    font-size: 1.3rem;
+    padding-top: 0.8rem;
+    padding-right: 5rem;
+}
+
+.titulo-sponsor h2{
+        font-family: "Bebas Neue", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 2.5rem;
+        text-align: center;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        background-color: #b02115;
+        color: white;
+        margin-top: 4rem;
+    }
+
+.titulo-sponsor h2 a{
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+}
+

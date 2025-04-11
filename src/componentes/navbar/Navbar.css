@@ -1,0 +1,13 @@
+.ms-auto .carrito{
+    background-color:#b02115;
+    border-radius: 1rem;
+    color: white;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.ms-auto .carrito:hover{
+    color: #ead03b;
+}
+
