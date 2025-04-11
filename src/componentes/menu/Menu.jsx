@@ -5,6 +5,7 @@ import texas2 from '../imagenes/texas2.jpg'
 import montana2 from '../imagenes/montana2.jpg'
 import ohio2 from '../imagenes/ohio2.jpg'
 import Footer from '../footer/Footer'
+import CanvaEjemplo from '../comprar/Comprar';
 
 const Menu = () => {
     return(
@@ -38,7 +39,7 @@ const Menu = () => {
                                         <p className='priceModificado' style={{fontSize:'18px'}}>$8.500</p>
                                     </div>
                                         <div className='btn-agregar-miss'>
-                                            <button>Agregar</button>
+                                            <CanvaEjemplo />
                                         </div>
                             </div>
                         </div>
@@ -56,8 +57,8 @@ const Menu = () => {
                                         <p className='price' style={{fontSize:'18px'}}>$12.352</p>
                                         <p className='priceModificado' style={{fontSize:'18px'}}>$10.499</p>
                                     </div>
-                                        <div className='btn-agregar-miss'>
-                                            <button>Agregar</button>
+                                    <div className='btn-agregar-miss'>
+                                            <CanvaEjemplo />
                                         </div>
                             </div>
                         </div>
@@ -77,7 +78,7 @@ const Menu = () => {
                                         <p className='priceModificado' style={{fontSize:'18px'}}>$11.999</p>
                                     </div>
                                         <div className='btn-agregar-miss'>
-                                            <button>Agregar</button>
+                                            <CanvaEjemplo />
                                         </div>
                             </div>
                         </div>
@@ -98,7 +99,7 @@ const Menu = () => {
                                         <p className='priceModificado' style={{fontSize:'18px'}}>$9.499</p>
                                     </div>
                                         <div className='btn-agregar'>
-                                            <button>Agregar</button>
+                                            <CanvaEjemplo />
                                         </div>
                             </div>
                         </div>
@@ -119,7 +120,7 @@ const Menu = () => {
                                         <p className='priceModificado' style={{fontSize:'18px'}}>$11.499</p>
                                     </div>
                                         <div className='btn-agregar'>
-                                            <button>Agregar</button>
+                                            <CanvaEjemplo />
                                         </div>
                             </div>
                         </div>
@@ -140,7 +141,7 @@ const Menu = () => {
                                         <p className='priceModificado' style={{fontSize:'18px'}}>$12.999</p>
                                     </div>
                                         <div className='btn-agregar'>
-                                            <button>Agregar</button>
+                                            <CanvaEjemplo />
                                         </div>
                             </div>
                         </div>
@@ -161,7 +162,7 @@ const Menu = () => {
                                         <p className='priceModificado' style={{fontSize:'18px'}}>$8.999</p>
                                     </div>
                                         <div className='btn-agregar'>
-                                            <button>Agregar</button>
+                                            <CanvaEjemplo />
                                         </div>
                             </div>
                         </div>
@@ -182,7 +183,7 @@ const Menu = () => {
                                         <p className='priceModificado' style={{fontSize:'18px'}}>$10.999</p>
                                     </div>
                                         <div className='btn-agregar'>
-                                            <button>Agregar</button>
+                                            <CanvaEjemplo />
                                         </div>
                             </div>
                         </div>
@@ -203,7 +204,7 @@ const Menu = () => {
                                         <p className='priceModificado' style={{fontSize:'18px'}}>$12.499</p>
                                     </div>
                                         <div className='btn-agregar'>
-                                            <button>Agregar</button>
+                                            <CanvaEjemplo />
                                         </div>
                             </div>
                         </div>
@@ -224,7 +225,7 @@ const Menu = () => {
                                         <p className='priceModificado' style={{fontSize:'18px'}}>$9.499</p>
                                     </div>
                                         <div className='btn-agregar'>
-                                            <button>Agregar</button>
+                                            <CanvaEjemplo />
                                         </div>
                             </div>
                         </div>
@@ -245,7 +246,7 @@ const Menu = () => {
                                         <p className='priceModificado' style={{fontSize:'18px'}}>$11.499</p>
                                     </div>
                                         <div className='btn-agregar'>
-                                            <button>Agregar</button>
+                                            <CanvaEjemplo />
                                         </div>
                             </div>
                         </div>
@@ -266,7 +267,7 @@ const Menu = () => {
                                         <p className='priceModificado' style={{fontSize:'18px'}}>$12.999</p>
                                     </div>
                                         <div className='btn-agregar'>
-                                            <button>Agregar</button>
+                                            <CanvaEjemplo />
                                         </div>
                             </div>
                         </div>
