@@ -84,7 +84,7 @@
     font-weight: 700;
 }
 
-.item-info .btn-agregar button{
+.item-info .btn-agregar{
     height: 40px;
     width: 150px;
     background-color: #b02115;
@@ -97,7 +97,13 @@
     border-radius: 5px;
 }
 
-.item-info .btn-agregar-miss button{
+.item-info .btn-agregar:active {
+    background-color: #b02115; /* mantiene el color al hacer clic */
+    border-color: #b02115;
+    box-shadow: none;
+}
+
+.item-info .btn-agregar-miss{
     height: 40px;
     width: 150px;
     background-color: #b02115;
@@ -111,7 +117,25 @@
     margin-top: 2.9rem;
 }
 
+.item-info .btn-agregar-miss:active {
+    background-color: #b02115; /* mantiene el color al hacer clic */
+    border-color: #b02115;
+    box-shadow: none;
+}
+
 .footer-menu{
     padding-top: 5rem;
 }
 
+.btn-compra{
+    background-color: #b02115;
+    border-color: #b02115;
+    box-shadow: none;
+    border: none;
+    margin: 2rem;
+    margin-left: 7.5rem;
+}
+
+.btn-compra:hover{
+    background-color:#b02115;
+}

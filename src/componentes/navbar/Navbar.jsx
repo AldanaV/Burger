@@ -2,10 +2,13 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import Button from 'react-bootstrap/Button';
 import './Navbar.css'
 
 
-function NavbarPrincipal() {
+
+
+function NavbarPrincipal({ onShow, cantidad, total }) {
 return (
     <Navbar expand="lg" className="bg-body-tertiary">
     <Container>
@@ -18,7 +21,9 @@ return (
             </Nav>
 
             <Nav className="ms-auto">
-                <Nav.Link className='carrito' href='/carrito'><i class="bi bi-cart3"></i> 0 - $0,00</Nav.Link>
+            <Button onClick={onShow} variant="outline-success">
+                <i className="bi bi-cart3"></i> {cantidad} - ${total.toLocaleString('es-AR')}
+            </Button>
             </Nav>
         </Navbar.Collapse>
     </Container>
