@@ -35,7 +35,8 @@ const Menu = ({ carrito, agregarAlCarrito, eliminarDelCarrito, total }) => {
     
     };
 
-    
+    //SE ELIMINA EL AGREGAR CARRITO Y ELIMINAR CARRITO PORQUE YA LO ESTA RECIBIENDO POR PROPS EN MENU DESDE APP
+
     //const eliminarDelCarrito = (index) => {
     //const nuevoCarrito = [...carrito]; // los "..." se llaman operador spread y sirven para copiar todos los elementos del array carrito actual y agregar uno nuevo al final, sin modificar el original.
     //nuevoCarrito.splice(index, 1); //splice Modifica el array original. - Elimina 1 elemento a partir del índice que le pasás.
