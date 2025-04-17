@@ -9,7 +9,20 @@ import Home from './componentes/home/home';
 import Menu from './componentes/menu/Menu';
 import Locales from './componentes/locales/Locales';
 
-
+const productos = [
+  { id: 1, nombre: 'Missouri 1.0', precio: 8500 },
+  { id: 2, nombre: 'Missouri 2.0', precio: 10499 },
+  { id: 3, nombre: 'Missouri 3.0', precio: 11999 },
+  { id: 4, nombre: 'Texas 1.0', precio: 9499 },
+  { id: 5, nombre: 'Texas 2.0', precio: 11499 },
+  { id: 6, nombre: 'Texas 3.0', precio: 12999 },
+  { id: 7, nombre: 'Montana 1.0', precio: 8999 },
+  { id: 8, nombre: 'Montana 2.0', precio: 10999 },
+  { id: 9, nombre: 'Montana 3.0', precio: 12499 },
+  { id: 10, nombre: 'Ohio 1.0', precio: 9499 },
+  { id: 11, nombre: 'Ohio 2.0', precio: 11499 },
+  { id: 12, nombre: 'Ohio 3.0', precio: 12999 },
+];
 
 function App() {
 
@@ -19,9 +32,12 @@ function App() {
   const handleShow = () => setShow(true);
   const handleClose = () => setShow(false);
 
-  const agregarAlCarrito = (producto) => {
-    setCarrito((prev) => [...carrito, producto]);
-    setShow(true);
+  const agregarAlCarrito = (id) => {
+    const producto = productos.find((p) => p.id === id);
+    if(producto){
+      setCarrito((prev) => [...prev, producto]);
+      //setShow(true);
+    }
   };
 
   const eliminarDelCarrito = (index) => {
@@ -44,7 +60,7 @@ function App() {
 
           <Routes>
             <Route path='/' exact Component={Home}/>
-            <Route path='/menu' element={<Menu carrito={carrito} agregarAlCarrito={agregarAlCarrito} />} />
+            <Route path='/menu' element={<Menu carrito={carrito} agregarAlCarrito={agregarAlCarrito} eliminarDelCarrito={eliminarDelCarrito} total={total} />} />
             <Route path='/locales' Component={Locales} />
           </Routes>
 
@@ -77,4 +93,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

@@ -23,38 +23,32 @@ const productos = [
     { id: 12, nombre: 'Ohio 3.0', precio: 12999 },
 ];
 
-const Menu = () => {
-    const [carrito, setCarrito] = useState([]);
+const Menu = ({ carrito, agregarAlCarrito, eliminarDelCarrito, total }) => {
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    const agregarAlCarrito = (id) => {
-        const producto = productos.find(p => p.id === id);
-        if (producto) {
-        setCarrito([...carrito, producto]);
+    const agregarYMostrar = (id) => {
+        agregarAlCarrito(id);
         setShow(true);
-    }
+    
     };
 
-    const eliminarDelCarrito = (index) => {
-    const nuevoCarrito = [...carrito]; // los "..." se llaman operador spread y sirven para copiar todos los elementos del array carrito actual y agregar uno nuevo al final, sin modificar el original.
-    nuevoCarrito.splice(index, 1); //splice Modifica el array original. - Elimina 1 elemento a partir del índice que le pasás.
-    setCarrito(nuevoCarrito);
-    };
+    
+    //const eliminarDelCarrito = (index) => {
+    //const nuevoCarrito = [...carrito]; // los "..." se llaman operador spread y sirven para copiar todos los elementos del array carrito actual y agregar uno nuevo al final, sin modificar el original.
+    //nuevoCarrito.splice(index, 1); //splice Modifica el array original. - Elimina 1 elemento a partir del índice que le pasás.
+    //setCarrito(nuevoCarrito);
+    //};
 
-    const total = carrito.reduce((acc, prod) => acc + prod.precio, 0); //reduce Suma los precios de todos los productos que hay en el carrito.
+    //const total = carrito.reduce((acc, prod) => acc + prod.precio, 0); //reduce Suma los precios de todos los productos que hay en el carrito.
 
     return (
         <div className='container-principal-menu'>
         <div className='container-menu'>
 
         <div className='titulo-menu'>
-            <Button className="btn btn-carrito" variant="primary" onClick={handleShow}>
-            Ver Carrito ({carrito.length})
-            </Button>
-            
             <h1>Menú</h1>
         </div>
 
@@ -80,7 +74,7 @@ const Menu = () => {
                             <p className='priceModificado' style={{fontSize:'18px'}}>$8.500</p>
                         </div>
                         
-                        <Button className='btn-agregar-miss' onClick={() => agregarAlCarrito(1)}>
+                        <Button className='btn-agregar-miss' onClick={() => agregarYMostrar(1)}>
                             Agregar
                         </Button>
 
@@ -100,7 +94,7 @@ const Menu = () => {
                             <p className='priceModificado' style={{fontSize:'18px'}}>$10.499</p>
                         </div>
                         
-                        <Button className='btn-agregar-miss' onClick={() => agregarAlCarrito(2)}>
+                        <Button className='btn-agregar-miss' onClick={() => agregarYMostrar(2)}>
                             Agregar
                         </Button>
 
@@ -120,7 +114,7 @@ const Menu = () => {
                             <p className='priceModificado' style={{fontSize:'18px'}}>$11.999</p>
                         </div>
                         
-                        <Button className='btn-agregar-miss' onClick={() => agregarAlCarrito(3)}>
+                        <Button className='btn-agregar-miss' onClick={() => agregarYMostrar(3)}>
                             Agregar
                         </Button>
                     </div>
@@ -141,7 +135,7 @@ const Menu = () => {
                             <p className='priceModificado' style={{fontSize:'18px'}}>$9.499</p>
                         </div>
                         
-                        <Button className='btn-agregar' onClick={() => agregarAlCarrito(4)}>
+                        <Button className='btn-agregar' onClick={() => agregarYMostrar(4)}>
                             Agregar
                         </Button>
                         
@@ -163,7 +157,7 @@ const Menu = () => {
                             <p className='priceModificado' style={{fontSize:'18px'}}>$11.499</p>
                         </div>
                         
-                        <Button className='btn-agregar' onClick={() => agregarAlCarrito(5)}>
+                        <Button className='btn-agregar' onClick={() => agregarYMostrar(5)}>
                             Agregar
                         </Button>
                     </div>
@@ -184,7 +178,7 @@ const Menu = () => {
                             <p className='priceModificado' style={{fontSize:'18px'}}>$12.999</p>
                         </div>
 
-                        <Button className='btn-agregar' onClick={() => agregarAlCarrito(6)}>
+                        <Button className='btn-agregar' onClick={() => agregarYMostrar(6)}>
                             Agregar
                         </Button>
 
@@ -206,7 +200,7 @@ const Menu = () => {
                             <p className='priceModificado' style={{fontSize:'18px'}}>$8.999</p>
                         </div>
 
-                        <Button className='btn-agregar' onClick={() => agregarAlCarrito(7)}>
+                        <Button className='btn-agregar' onClick={() => agregarYMostrar(7)}>
                             Agregar
                         </Button>
 
@@ -228,7 +222,7 @@ const Menu = () => {
                             <p className='priceModificado' style={{fontSize:'18px'}}>$10.999</p>
                         </div>
 
-                        <Button className='btn-agregar' onClick={() => agregarAlCarrito(8)}>
+                        <Button className='btn-agregar' onClick={() => agregarYMostrar(8)}>
                             Agregar
                         </Button>
 
@@ -250,7 +244,7 @@ const Menu = () => {
                             <p className='priceModificado' style={{fontSize:'18px'}}>$12.499</p>
                         </div>
 
-                        <Button className='btn-agregar' onClick={() => agregarAlCarrito(9)}>
+                        <Button className='btn-agregar' onClick={() => agregarYMostrar(9)}>
                             Agregar
                         </Button>
 
@@ -272,7 +266,7 @@ const Menu = () => {
                             <p className='priceModificado' style={{fontSize:'18px'}}>$9.499</p>
                         </div>
 
-                        <Button className='btn-agregar' onClick={() => agregarAlCarrito(10)}>
+                        <Button className='btn-agregar' onClick={() => agregarYMostrar(10)}>
                             Agregar
                         </Button>
 
@@ -294,7 +288,7 @@ const Menu = () => {
                             <p className='priceModificado' style={{fontSize:'18px'}}>$11.499</p>
                         </div>
 
-                        <Button className='btn-agregar' onClick={() => agregarAlCarrito(11)}>
+                        <Button className='btn-agregar' onClick={() => agregarYMostrar(11)}>
                             Agregar
                         </Button>
 
@@ -316,7 +310,7 @@ const Menu = () => {
                             <p className='priceModificado' style={{fontSize:'18px'}}>$12.999</p>
                         </div>
 
-                        <Button className='btn-agregar' onClick={() => agregarAlCarrito(12)}>
+                        <Button className='btn-agregar' onClick={() => agregarYMostrar(12)}>
                             Agregar
                         </Button>
 
@@ -357,6 +351,6 @@ const Menu = () => {
         </Offcanvas>
     </div>
     );
-};
 
+};
 export default Menu;
