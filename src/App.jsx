@@ -9,6 +9,7 @@ import Home from './componentes/home/home';
 import Menu from './componentes/menu/Menu';
 import Locales from './componentes/locales/Locales';
 
+//Tenemos que ponerlo acá también para que aparezca en el navbar
 const productos = [
   { id: 1, nombre: 'Missouri 1.0', precio: 8500 },
   { id: 2, nombre: 'Missouri 2.0', precio: 10499 },
@@ -25,9 +26,10 @@ const productos = [
 ];
 
 function App() {
-
+    //Lo hacemos acá para que el carrito sea global
   const [carrito, setCarrito] = useState([]);
   const [show, setShow] = useState(false);
+
 
   const handleShow = () => setShow(true);
   const handleClose = () => setShow(false);
@@ -35,15 +37,15 @@ function App() {
   const agregarAlCarrito = (id) => {
     const producto = productos.find((p) => p.id === id);
     if(producto){
-      setCarrito((prev) => [...prev, producto]);
-      //setShow(true);
+      setCarrito((prev) => [...prev, producto]); //"prev" es el valor anterior del estado de carrito antes de actualizarlo
+      //setShow(true);                           los "..." se llaman operador spread y sirven para copiar todos los elementos del array carrito actual y agregar uno nuevo al final
     }
   };
 
   const eliminarDelCarrito = (index) => {
-    const nuevo = [...carrito];
-    nuevo.splice(index, 1);
-    setCarrito(nuevo);
+    const nuevo = [...carrito]; //En este caso usamos el "..." (operador spread) para copiar el contenido de carrito en nuevo
+    nuevo.splice(index, 1); //para acá decirle a nuevo que le sacamos un producto e indice en especifico
+    setCarrito(nuevo); //y actualizamos el estado con la copia modificada (si no lo hicieramos asi, tocariamos el array original que esta en el estado y eso puede causar errores )
   };
 
   const total = carrito.reduce((acc, prod) => acc + prod.precio, 0);
@@ -53,14 +55,14 @@ function App() {
         <Router>
           <NavbarPrincipal
             onShow={handleShow} 
-            cantidad={carrito.length} 
+            cantidad={carrito.length} //lenght para que recorra todo lo que tien carrito 
             total={total}
             carrito={carrito}
           />
 
           <Routes>
             <Route path='/' exact Component={Home}/>
-            <Route path='/menu' element={<Menu carrito={carrito} agregarAlCarrito={agregarAlCarrito} eliminarDelCarrito={eliminarDelCarrito} total={total} />} />
+            <Route path='/menu' element={<Menu carrito={carrito} agregarAlCarrito={agregarAlCarrito} eliminarDelCarrito={eliminarDelCarrito} total={total} abrirCarrito={handleShow} />} />
             <Route path='/locales' Component={Locales} />
           </Routes>
 

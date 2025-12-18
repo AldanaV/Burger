@@ -23,28 +23,23 @@ const productos = [
     { id: 12, nombre: 'Ohio 3.0', precio: 12999 },
 ];
 
-const Menu = ({ carrito, agregarAlCarrito, eliminarDelCarrito, total }) => {
-    const [show, setShow] = useState(false);
-
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-
+const Menu = ({ carrito, agregarAlCarrito, eliminarDelCarrito, total, abrirCarrito}) => {
+    
     const agregarYMostrar = (id) => {
         agregarAlCarrito(id);
-        setShow(true);
-    
+        abrirCarrito();
     };
 
     //SE ELIMINA EL AGREGAR CARRITO Y ELIMINAR CARRITO PORQUE YA LO ESTA RECIBIENDO POR PROPS EN MENU DESDE APP
 
     //const eliminarDelCarrito = (index) => {
     //const nuevoCarrito = [...carrito]; // los "..." se llaman operador spread y sirven para copiar todos los elementos del array carrito actual y agregar uno nuevo al final, sin modificar el original.
-    //nuevoCarrito.splice(index, 1); //splice Modifica el array original. - Elimina 1 elemento a partir del índice que le pasás.
+    //nuevoCarrito.splice(index, 1); //splice Modifica el array original. - Elimina 1 elemento a partir del índice que le pasas.
     //setCarrito(nuevoCarrito);
     //};
 
-    //const total = carrito.reduce((acc, prod) => acc + prod.precio, 0); //reduce Suma los precios de todos los productos que hay en el carrito.
-
+    //const total = carrito.reduce((acc, prod) => acc + prod.precio, 0); //reduce reccore el array y suma los precios de todos los productos que hay en el carrito.
+                    //"acc" es un acumulador, "prod" es cada producto del carrito y el "0" es el valor del acc en el metodo "reduce".
     return (
         <div className='container-principal-menu'>
         <div className='container-menu'>
@@ -326,30 +321,7 @@ const Menu = ({ carrito, agregarAlCarrito, eliminarDelCarrito, total }) => {
         <Footer />
     </div>
 
-      {/* Offcanvas del carrito */}
-        <Offcanvas show={show} onHide={handleClose} placement="end">
-        <Offcanvas.Header closeButton>
-            <Offcanvas.Title>Carrito</Offcanvas.Title>
-        </Offcanvas.Header>
-        <Offcanvas.Body>
-            {carrito.length === 0 ? (
-            <p>El carrito está vacío.</p>
-            ) : (
-            <ul className="list-group">
-                {carrito.map((producto, index) => (
-                <li key={index} className="list-group-item d-flex justify-content-between align-items-center">
-                    {producto.nombre} - ${producto.precio}
-                        <Button variant="danger" size="sm" onClick={() => eliminarDelCarrito(index)}>Eliminar</Button>
-                </li>
-                ))}
-            </ul>
-            )}
-            <hr />
-            <h5>Total: ${total}</h5>
-            
-            <Button className='btn-compra'>Confirmar compra</Button>
-        </Offcanvas.Body>
-        </Offcanvas>
+      
     </div>
     );
 

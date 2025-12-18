@@ -1,0 +1,10 @@
+.btn-compra {
+  background-color: #b02115; /* Rojo normal */
+  color: white;
+  transition: 0.1s ease;
+}
+
+.btn-compra:active {
+  background-color: #91291f !important; /* Cambia ligeramente mientras esta presionado */
+  color: white;
+}
