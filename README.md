@@ -1,8 +1,9 @@
-# React + Vite
+Burguer Taster - gestión de una hamburgueseria
+<br>
+¡Bienvenidos a la página no oficial de Burger Taster!
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una aplicación web pensada para la gestión de una hamburgueseria.
 
-Currently, two official plugins are available:
+¡Todavía estamos en proceso de crearla, luego se agregaran los detalles!
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Aclaración: todos los derechos de la marca pertenecen a su dueño legitimo, esto es simplemente un proyecto de practica.
